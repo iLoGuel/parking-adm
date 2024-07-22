@@ -2,24 +2,43 @@
     let links = [
         { name: 'Inicio', href: '/' },
         { name: 'Nuestro Software', href: '/' },
-        { name: 'Contacto', href: '/' }
+        { name: 'Contacto', href: '/' },
+        { name: 'Ingresar', href: '/' },
     ]
 </script>
 
-<nav class="bg-gray-200 shadow">
-    <div class="max-w-7xl px-5 py-3 mx-auto text-lg flex justify-between">
-        <a href="/"><img src="https://pngimg.com/d/parking_PNG36.png" alt="" class="transition-all w-5 h-auto hover:scale-105"></a>
-        <ul class="flex gap-4 font-semibold">
-            {#each links as link}
-                <li>
-                    <a href={link.href} class="transition-all hover:text-blue-800">{link.name}</a>
-                </li> 
-            {/each}
-        </ul>
-</nav>
+<header class="bg-primary text-primary-foreground px-4 lg:px-6 py-6 flex items-center justify-between">
+    <a class="flex items-center gap-2" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+        <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+      </svg>
+      <span class="text-2xl font-bold">Acme Inc</span>
+    </a>
+    <nav class="hidden lg:flex gap-6">
+        {#each links as link}
+            <a class="text-lg font-medium hover:underline" href={link.href}>{link.name}</a>
+        {/each}
+    </nav>
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+  </header>
 <div class="max-w-7xl mx-auto px-5 py-3">
     <slot/>
 </div>
-<footer>
-
-</footer>
+<footer class="bg-muted text-muted-foreground px-4 md:px-6 py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm">© 2024 Acme Inc. Todos los derechos reservados.</p>
+    <nav class="flex gap-4 sm:gap-6">
+      <a class="text-sm hover:underline" href="#" rel="ugc">
+        Términos de servicio
+      </a>
+      <a class="text-sm hover:underline" href="#" rel="ugc">
+        Privacidad
+      </a>
+    </nav>
+  </footer>
