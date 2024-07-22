@@ -20,7 +20,7 @@
       </svg>
       <span class="text-2xl font-bold">Parking Manager</span>
     </a>
-    <button class={`${openMenu ? '':'opacity-0 pointer-events-none'} fixed bg-black w-screen h-screen top-0 right-0 opacity-50 lg:hidden `} on:click={toggleMenu}></button>
+    <button class={`${openMenu ? 'opacity-50':'opacity-0 pointer-events-none'} fixed bg-black w-screen h-screen top-0 right-0 lg:hidden `} on:click={toggleMenu}></button>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <nav class={`${openMenu ? '':'translate-x-full lg:translate-x-0'} fixed flex flex-col p-5 gap-4 w-7/12 h-screen top-0 right-0 bg-white lg:static lg:w-auto lg:h-auto lg:flex-row lg:right-0 lg:p-0`}>
