@@ -5,6 +5,12 @@
         { name: 'Contacto', href: '/' },
         { name: 'Ingresar', href: '/' },
     ]
+
+    let openMenu = false;
+
+    function toggleMenu () {
+      openMenu = !openMenu
+    };
 </script>
 
 <header class="bg-primary text-primary-foreground px-4 lg:px-6 py-6 flex items-center justify-between sticky top-0 bg-white">
@@ -14,12 +20,15 @@
       </svg>
       <span class="text-2xl font-bold">Parking Manager</span>
     </a>
-    <nav class="hidden lg:flex gap-6">
+    <button class={`${openMenu ? '':'opacity-0 pointer-events-none'} fixed bg-black w-screen h-screen top-0 right-0 opacity-50 lg:hidden`} on:click={toggleMenu}></button>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+    <nav class={`${openMenu ? '':'translate-x-full lg:translate-x-0'} fixed flex flex-col p-5 gap-4 w-7/12 h-screen top-0 right-0 bg-white lg:static lg:w-auto lg:h-auto lg:flex-row lg:right-0 lg:p-0`}>
         {#each links as link}
             <a class="text-lg font-medium hover:underline" href={link.href}>{link.name}</a>
         {/each}
     </nav>
-    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 lg:hidden">
+    <button on:click={toggleMenu} class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 lg:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
         <line x1="4" x2="20" y1="12" y2="12"></line>
         <line x1="4" x2="20" y1="6" y2="6"></line>
