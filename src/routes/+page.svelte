@@ -16,18 +16,18 @@
               <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2">
                 Empezar
               </button>
-              <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+              <a href="#caracteristicas" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
                 Más información
-              </button>
+              </a>
             </div>
           </div>
           <img src="https://backend.vivendo.co/sites/default/files/styles/display_post/public/2020-03/parqueadero.png.jpg?itok=GvVfphSo" width="600" height="400" alt="Hero" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
           />
         </div>
       </section>
-      <section class="py-12 md:py-24 lg:py-32">
+      <section class="py-12 md:py-24 lg:py-32" id="caracteristicas">
         <div class="container px-4 md:px-6 space-y-8">
-          <div class="text-center space-y-4">
+          <div class="text-center space-y-4" >
             <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Características destacadas</h2>
             <p class="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
               Descubre cómo nuestra plataforma puede transformar tu negocio.

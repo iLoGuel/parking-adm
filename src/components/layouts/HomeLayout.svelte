@@ -7,12 +7,12 @@
     ]
 </script>
 
-<header class="bg-primary text-primary-foreground px-4 lg:px-6 py-6 flex items-center justify-between">
+<header class="bg-primary text-primary-foreground px-4 lg:px-6 py-6 flex items-center justify-between sticky top-0 bg-white">
     <a class="flex items-center gap-2" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
         <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
       </svg>
-      <span class="text-2xl font-bold">Acme Inc</span>
+      <span class="text-2xl font-bold">Parking Manager</span>
     </a>
     <nav class="hidden lg:flex gap-6">
         {#each links as link}
@@ -34,10 +34,10 @@
 <footer class="bg-muted text-muted-foreground px-4 md:px-6 py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
     <p class="text-sm">© 2024 Acme Inc. Todos los derechos reservados.</p>
     <nav class="flex gap-4 sm:gap-6">
-      <a class="text-sm hover:underline" href="#" rel="ugc">
+      <a class="text-sm hover:underline" href="/" rel="ugc">
         Términos de servicio
       </a>
-      <a class="text-sm hover:underline" href="#" rel="ugc">
+      <a class="text-sm hover:underline" href="/" rel="ugc">
         Privacidad
       </a>
     </nav>

@@ -1,5 +1,5 @@
 <script>
-	import '../app.css'; /* Tailwind */
+	import "../app.css"; /* Tailwind */
 </script>
 
 <slot />
