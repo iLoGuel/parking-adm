@@ -17,20 +17,7 @@
   class="bg-primary text-primary-foreground px-4 lg:px-6 py-6 flex items-center justify-between sticky top-0 bg-white"
 >
   <a class="flex items-center gap-2" href="/">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-6 w-6"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
-    </svg>
+    <svg class="w-6 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
     <span class="text-2xl font-bold">Parking Manager</span>
   </a>
   <button
@@ -77,8 +64,8 @@
 <footer
   class="bg-muted text-muted-foreground px-4 md:px-6 py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
 >
-  <p class="text-sm">© 2024 Acme Inc. Todos los derechos reservados.</p>
-  <nav class="flex gap-4 sm:gap-6">
+  <p class="text-sm text-center lg:text-start">© 2024 Parking Manager. Todos los derechos reservados.</p>
+  <nav class="flex gap-4 sm:gap-6 justify-center lg:justify-start">
     <a class="text-sm hover:underline" href="/" rel="ugc">
       Términos de servicio
     </a>

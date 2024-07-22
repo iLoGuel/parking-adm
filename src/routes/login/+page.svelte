@@ -47,7 +47,7 @@
                   </div>
                   <div class="mt-4 flex items-center justify-between">
                     <div class="text-sm">
-                      ¿No tienes cuenta aún? <a href="/register" class="text-black font-bold underline"> Crea una </a>
+                      ¿No tienes cuenta aún? <a href="/" class="text-black font-bold underline"> Crea una </a>
                     </div>
                   </div>
                   <button
