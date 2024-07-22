@@ -1,5 +1,5 @@
 <script>
-    import HomeLayout from "../components/layouts/HomeLayout.svelte";
+    import HomeLayout from "../layouts/HomeLayout.svelte";
 </script>
 
 <HomeLayout>
