@@ -1,5 +1,10 @@
 <script>
+    import PocketBase from 'pocketbase';
     import Card from "../../components/Card.svelte";
+    import {dataBase} from '../../global';
+    import { onMount } from 'svelte';
+
+    
 </script>
 
 <main class="flex w-screen h-screen justify-center items-center">
