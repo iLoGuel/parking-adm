@@ -25,7 +25,7 @@
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {#each resultList.items as item}
             <Card>
-              <div class="text-center">
+              <div class="text-center overflow-hidden">
                 <h1 class="text-3xl font-bold tracking-tight">
                   {item.plate}
                 </h1>

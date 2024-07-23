@@ -39,11 +39,11 @@
 {#if pb.authStore.isValid}
   <main class="flex flex-row">
     <button
-      class={`${openMenu ? "opacity-50" : "opacity-0 pointer-events-none"} fixed bg-black w-screen h-screen top-0 right-0 lg:hidden `}
+      class={`${openMenu ? "opacity-50" : "opacity-0 pointer-events-none"} fixed bg-black w-screen h-screen top-0 right-0 lg:hidden z-40`}
       on:click={toggleMenu}
     ></button>
     <nav
-      class={`h-screen overflow-y-auto w-72 bg-gray-100 shadow flex flex-col p-4 fixed lg:static ${openMenu ? "" : "-translate-x-full lg:absolute"}`}
+      class={`h-screen overflow-y-auto w-72 bg-gray-100 shadow flex flex-col p-4 fixed lg:static z-50 ${openMenu ? "" : "-translate-x-full lg:absolute"}`}
     >
       <a class="flex items-center gap-2 self-center" href="/">
         <svg
@@ -109,7 +109,7 @@
       </p>
     </nav>
     <div class="flex-1 flex flex-col p-4 gap-4">
-      <nav class="flex justify-between items-center">
+      <nav class="flex justify-between items-center sticky top-0 py-4 bg-white">
         <button class="flex items-center gap-3" on:click={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,9 +144,7 @@
           </svg>
         </button>
       </nav>
-      <div class="flex-1">
-        <slot />
-      </div>
+      <slot />
     </div>
   </main>
 {/if}
