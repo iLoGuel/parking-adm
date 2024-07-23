@@ -14,7 +14,8 @@
   });
 
   async function updateQuery() {
-    return resultList = await pb.collection("activity").getList(1, 50);
+    resultList = await pb.collection("activity").getList(1, 50);
+    console.log(resultList);
   }
 </script>
 
@@ -35,12 +36,6 @@
           </Card>
         {/each}
       </div>
-    </div>
-  {:else}
-    <div class="text-center">
-      <h1 class="text-3xl font-bold tracking-tight">
-        Cargando...
-      </h1>
     </div>
   {/if}
 </DashboardLayout>
