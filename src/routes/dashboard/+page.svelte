@@ -2,6 +2,6 @@
     import DashboardLayout from "../../layouts/DashboardLayout.svelte";
 </script>
 
-<DashboardLayout>
+<DashboardLayout pageTitle="Dashboard">
     
 </DashboardLayout>

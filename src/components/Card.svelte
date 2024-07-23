@@ -1,3 +1,3 @@
-<div class="w-fit h-fit shadow rounded-3xl bg-gray-100">
+<div class="rounded-lg border bg-card text-card-foreground shadow-sm">
     <slot />
 </div>

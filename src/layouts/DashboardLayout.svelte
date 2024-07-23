@@ -1,15 +1,18 @@
 <script>
     import { page } from "$app/stores";
     import { onMount } from "svelte";
+    import {appName} from '../global'
     let dashboardMenu =[
         { name: "Dashboard", href: "/dashboard", icon: null},
-        { name: "Actividad", href: null, icon: null},
+        { name: "Actividad", href: "/activity", icon: null},
         { name: "Mensualidad", href: null, icon: null},
         { name: "Clientes", href: null, icon: null},
         { name: "Reportes", href: null, icon: null},
         { name: "Configuración", href: null, icon: null},
         { name: "Ayuda", href: null, icon: null},
     ];
+
+    export let pageTitle;
 
     let openMenu;
     onMount(() => {
@@ -20,7 +23,9 @@
         openMenu = !openMenu;
     }
 </script>
-
+<svelte:head>
+    <title>{appName} - {pageTitle}</title>
+</svelte:head>
 <main class="flex flex-row">
     <button class={`${openMenu ? "opacity-50" : "opacity-0 pointer-events-none"} fixed bg-black w-screen h-screen top-0 right-0 lg:hidden `} on:click={toggleMenu}></button>
     <nav class={`h-screen overflow-y-auto w-72 bg-gray-100 shadow flex flex-col p-4 fixed lg:static ${openMenu ? '':'-translate-x-full lg:absolute'}`}>
@@ -57,20 +62,19 @@
         <hr>
         <p class="text-xs text-center text-gray-400 mt-3">Todos los derechos reservados &copy; 2024</p>
     </nav>
-    <div class="flex-1 p-4">
+    <div class="flex-1 flex flex-col p-4 gap-4">
         <nav class="flex justify-between items-center">
             <button class="flex items-center gap-3" on:click={toggleMenu}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 bg-black rounded-md p-1 stroke-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>                                 
-                <h1 class="text-1xl font-bold">Dashboard</h1>
+                <h1 class="text-1xl font-bold">{pageTitle}</h1>
             </button>
             <button>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="size-7">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
                 </svg>
             </button>
-              
         </nav>
         <div class="flex-1">
             <slot />
