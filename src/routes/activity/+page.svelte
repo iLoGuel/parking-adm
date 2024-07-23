@@ -15,7 +15,6 @@
 
   async function updateQuery() {
     resultList = await pb.collection("activity").getList(1, 50);
-    console.log(resultList);
   }
 </script>
 
