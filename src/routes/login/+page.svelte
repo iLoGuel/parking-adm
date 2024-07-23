@@ -1,7 +1,7 @@
 <script>
   import PocketBase from "pocketbase";
-  import Card from "../../components/Card.svelte";
   import { dataBase } from "../../global";
+  import Card from "../../components/Card.svelte";
   import { onMount } from "svelte";
 
   const pb = new PocketBase(dataBase);
