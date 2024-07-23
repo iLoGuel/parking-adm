@@ -4,7 +4,7 @@
     let dashboardMenu =[
         { name: "Dashboard", href: "/dashboard", icon: null},
         { name: "Actividad", href: null, icon: null},
-        { name: "Mensualidades", href: null, icon: null},
+        { name: "Mensualidad", href: null, icon: null},
         { name: "Clientes", href: null, icon: null},
         { name: "Reportes", href: null, icon: null},
         { name: "Configuración", href: null, icon: null},
