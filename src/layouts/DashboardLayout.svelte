@@ -1,5 +1,6 @@
 <script>
     import { page } from "$app/stores";
+    import { onMount } from "svelte";
     let dashboardMenu =[
         { name: "Dashboard", href: "/dashboard", icon: null},
         { name: "Actividad", href: null, icon: null},
@@ -7,7 +8,10 @@
         { name: "Clientes", href: null, icon: null},
     ];
 
-    let openMenu = true;
+    let openMenu;
+    onMount(() => {
+        openMenu = window.innerWidth > 1024;
+    });
 
     function toggleMenu() {
         openMenu = !openMenu;
