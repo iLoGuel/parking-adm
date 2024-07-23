@@ -22,20 +22,20 @@
   {#if resultList}
     <div>
       {#if resultList.items && resultList.items.length > 0}
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {#each resultList.items as item}
-          <Card>
-            <div class="text-center">
-              <h1 class="text-3xl font-bold tracking-tight">
-                {item.plate}
-              </h1>
-              <p class="text-muted-foreground">
-                {item.description}
-              </p>
-            </div>
-          </Card>
-        {/each}
-      </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {#each resultList.items as item}
+            <Card>
+              <div class="text-center">
+                <h1 class="text-3xl font-bold tracking-tight">
+                  {item.plate}
+                </h1>
+                <p class="text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            </Card>
+          {/each}
+        </div>
       {:else}
         <p>No hay resultados</p>
       {/if}
