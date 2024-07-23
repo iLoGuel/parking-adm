@@ -40,7 +40,7 @@
                     </li>
                 {/each}
         </div>
-        <div class="flex items-center justify-between gap-3 font-bold ">
+        <div class="flex items-center justify-between gap-3 font-bold mb-6">
             <div class="flex items-center gap-2">
                 <img class="rounded-full size-10" src="https://ntrepidcorp.com/wp-content/uploads/2016/06/team-1.jpg" alt="">
                 <div class="flex flex-col">
@@ -54,6 +54,8 @@
                 </svg>
             </button>
         </div>
+        <hr>
+        <p class="text-xs text-center text-gray-400 mt-3">Todos los derechos reservados &copy; 2024</p>
     </nav>
     <div class="flex-1 p-4">
         <nav class="flex justify-between items-center">
