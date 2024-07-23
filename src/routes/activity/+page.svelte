@@ -22,6 +22,7 @@
 <DashboardLayout pageTitle="Actividad">
   {#if resultList}
     <div>
+      {#if resultList.items && resultList.items.length > 0}
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {#each resultList.items as item}
           <Card>
@@ -36,6 +37,11 @@
           </Card>
         {/each}
       </div>
+      {:else}
+        <p>No hay resultados</p>
+      {/if}
     </div>
+  {:else}
+    <p>Cargando...</p>
   {/if}
 </DashboardLayout>
