@@ -17,6 +17,12 @@
         errorMessage = "Credenciales incorrectas";
       });
   }
+
+  onMount(() => {
+    if (pb.authStore.isValid) {
+      window.location.href = "/dashboard";
+    }
+  });
 </script>
 
 <main class="flex w-screen h-screen justify-center items-center">
