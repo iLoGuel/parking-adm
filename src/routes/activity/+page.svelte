@@ -54,7 +54,7 @@
           {/each}
           <Modal bind:showModal>
             <Card>
-              <div class="p-4 flex flex-col gap-4 w-96 m-4">
+              <div class="p-4 flex flex-col gap-4 w-96">
                 <h1 class="text-2xl font-bold tracking-tight text-start">
                   Información adicional
                 </h1>
