@@ -14,11 +14,11 @@
 
   onMount(async () => {
     await updateQuery();
-    pb.collection("activity").subscribe("*", updateQuery);
+    pb.collection("plates").subscribe("*", updateQuery);
   });
 
   async function updateQuery() {
-    resultList = await pb.collection("activity").getList(1, 50);
+    resultList = await pb.collection("plates").getList(1, 50);
   }
 
   function showCardModal(item) {
@@ -43,7 +43,7 @@
               <Card>
                 <div class="text-center overflow-hidden">
                   <h1 class="text-3xl font-bold tracking-tight">
-                    {item.plate}
+                    {item.name}
                   </h1>
                   <p class="text-muted-foreground">
                     {item.description}
@@ -59,7 +59,7 @@
                   Información adicional
                 </h1>
                 <hr />
-                <p class="text-start">Placa: {plateInfo.plate}</p>
+                <p class="text-start">Placa: {plateInfo.name}</p>
                 <Buttons
                   onClick={() => {
                     showModal = !showModal;
