@@ -4,6 +4,7 @@
   import DashboardLayout from "../../layouts/DashboardLayout.svelte";
   import { onMount } from "svelte";
   import Card from "../../components/Card.svelte";
+  import Buttons from "../../components/Buttons.svelte";
 
   const pb = new PocketBase(dataBase);
   let resultList;
@@ -20,7 +21,16 @@
 
 <DashboardLayout pageTitle="Actividad">
   {#if resultList}
-    <div>
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-row gap-4">
+        <Buttons onClick={updateQuery}>Registrar vehiculo</Buttons
+        >
+        <input
+          type="text"
+          placeholder="Buscar..."
+          class="input input-bordered w-full max-w-xs"
+        />
+      </div>
       {#if resultList.items && resultList.items.length > 0}
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {#each resultList.items as item}
