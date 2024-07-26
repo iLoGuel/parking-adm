@@ -20,7 +20,7 @@
   onDestroy(() => {
     pb.collection("plates").unsubscribe("*");
   });
-  
+
   async function updateQuery() {
     resultList = await pb.collection("plates").getList(1, 50);
   }
