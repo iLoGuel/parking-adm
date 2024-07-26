@@ -7,7 +7,7 @@
         <div class="container px-4 md:px-6 grid gap-8 lg:grid-cols-2 lg:gap-16">
           <div class="space-y-4">
             <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              Transforma tu negocio con nuestra plataforma
+              Gestiona tu estacionamiento con nuestro software
             </h1>
             <p class="text-xl text-muted-foreground">
               Ofrecemos herramientas poderosas y fáciles de usar para impulsar tu éxito en línea.

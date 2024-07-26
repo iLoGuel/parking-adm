@@ -3,6 +3,7 @@
   import { dataBase } from "../../global";
   import Card from "../../components/Card.svelte";
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
 
   const pb = new PocketBase(dataBase);
   let email, password, errorMessage;
@@ -25,7 +26,7 @@
   });
 </script>
 
-<main class="flex w-screen h-screen justify-center items-center">
+<main class="flex w-screen h-screen justify-center items-center" transition:fade>
   <Card>
     <div class="p-4 max-w-7xl">
       <div class="mx-auto w-full max-w-md space-y-8 rounded-2xl bg-card p-8">

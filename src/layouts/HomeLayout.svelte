@@ -1,7 +1,7 @@
 <script>
   let links = [
     { name: "Inicio", href: "/" },
-    { name: "Nuestro Software", href: "/" },
+    { name: "Caracteristicas", href: "#caracteristicas" },
     { name: "Contacto", href: "/" },
     { name: "Ingresar", href: "/login" },
   ];
