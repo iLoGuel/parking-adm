@@ -2,7 +2,7 @@
   import PocketBase from "pocketbase";
   import { dataBase } from "../../global";
   import DashboardLayout from "../../layouts/DashboardLayout.svelte";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import Buttons from "../../components/Buttons.svelte";
   import Modal from "../../components/Modal.svelte";
   import Card from "./../../components/Card.svelte";
@@ -17,6 +17,10 @@
     pb.collection("plates").subscribe("*", updateQuery);
   });
 
+  onDestroy(() => {
+    pb.collection("plates").unsubscribe("*");
+  });
+  
   async function updateQuery() {
     resultList = await pb.collection("plates").getList(1, 50);
   }
